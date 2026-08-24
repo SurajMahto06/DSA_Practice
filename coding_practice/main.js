@@ -122,7 +122,7 @@
 //       for(let j=i+1; j<arr.length; j++){
 //          if(arr[i] + arr[j] === target){
 //            return [i,j]
-//          } 
+//          }
 //       }
 //   }
 //   return []
@@ -130,3 +130,47 @@
 
 // console.log(twoSum(arr,target))
 
+// add and remove object
+
+// const obj = {
+//    users:{
+//       name: 'suraj',
+//       address: {
+//          city: 'chaibasa',
+
+//       }
+//    }
+// }
+
+// function setObject(obj, path, value){
+
+//   let  keys = path.split(".")
+//   let current  = obj
+
+//   for(let i=0; i<keys.length -1; i++){
+//      current = current[keys[i]]
+//   }
+//   current[keys[keys.length -1]] = value
+
+// }
+
+// setObject(obj, 'users.address.pincode', 833201)
+// console.log(obj)
+
+const arr = [1, 2, 3, 4,67,86,456,778,43];
+
+function findSecondLarget(arr) {
+  let max = -1;
+  let secondMax = -1;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > max) {
+      secondMax = max;
+      max = arr[i];
+    } else if (arr[i] > secondMax) {
+      secondMax = arr[i];
+    }
+  }
+  return secondMax;
+}
+
+console.log(findSecondLarget(arr));
