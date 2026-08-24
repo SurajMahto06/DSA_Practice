@@ -157,20 +157,34 @@
 // setObject(obj, 'users.address.pincode', 833201)
 // console.log(obj)
 
+// const arr = [1, 2, 3, 4,67,86,456,778,43];
+
+// function findSecondLarget(arr) {
+//   let max = -1;
+//   let secondMax = -1;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > max) {
+//       secondMax = max;
+//       max = arr[i];
+//     } else if (arr[i] > secondMax) {
+//       secondMax = arr[i];
+//     }
+//   }
+//   return secondMax;
+// }
+
+// console.log(findSecondLarget(arr));
+
 const arr = [1, 2, 3, 4,67,86,456,778,43];
 
-function findSecondLarget(arr) {
+function findLarget(arr) {
   let max = -1;
-  let secondMax = -1;
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > max) {
-      secondMax = max;
-      max = arr[i];
-    } else if (arr[i] > secondMax) {
-      secondMax = arr[i];
-    }
+     if(arr[i] >= max){
+       max =+ arr[i]
+     }
   }
-  return secondMax;
+  return max;
 }
 
-console.log(findSecondLarget(arr));
+console.log(findLarget(arr));
